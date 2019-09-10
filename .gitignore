@@ -1,0 +1,5 @@
+/[Bb]uild/
+/[Bb]inaries/
+
+.vscode/
+.vs/

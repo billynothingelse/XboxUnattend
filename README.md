@@ -2,8 +2,10 @@
 Run unattended scripts at the highest privilege level.
 
 ## Usage
-Create and place an unattended script on an NTFS formatted USB device and then plug it into your console.
-Deploy xboxunattend to an accessible location on the console and run.
+```
+xboxunattend.exe -usb - Run an unattended script located on the root of USB device
+xboxunattend.exe -script <Script File Path> - Run a script from file path
+```
 
 See: https://wiki.xosft.dev/index.php?title=Setup_Dev_Mode#Using_SSH
 
@@ -15,9 +17,6 @@ the Xbox Device Portal for UWA/SRA kits, we can still fortunately utilise this c
 
 ## What is an 'unattended' script?
 An unattended script is just a fancier name for a simple batch script.
-
-## Known issues
-Although there appears to be a function that will execute a script at a specified path; I have not been able to successfully call the function. It's an issue I haven't looked into and it is possible that the service responsible may be handling incorrectly or doesn't directly support it.
 
 ## References
 * https://conference.hitb.org/files/hitbsecconf2018pek/materials/D1T2%20-%20The%20Inner%20Workings%20of%20the%20Windows%20Runtime%20-%20James%20Forshaw.pdf

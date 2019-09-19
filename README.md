@@ -7,7 +7,7 @@ xboxunattend.exe -usb - Run an unattended script located on the root of USB devi
 xboxunattend.exe -script <Script File Path> - Run a script from file path
 ```
 
-See: https://wiki.xosft.dev/index.php?title=Setup_Dev_Mode#Using_SSH
+See: https://wiki.xosft.dev/setup-dev-mode
 
 ## How does it work?
 Every Xbox One development kits contain the same developer tools environment has features that are common regardless of capability certificate but some 

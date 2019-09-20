@@ -7,6 +7,7 @@
 #define CMD_DESC_USB "xboxunattend.exe -usb"
 #define CMD_DESC_SCRIPT "xboxunattend.exe -script D:\\DevelopmentFiles\\MyScript.cmd"
 
+constexpr wchar_t g_szDefaultBootPath[] = L"D:\\boot";
 constexpr wchar_t g_szDefaultLogPath[] = L"D:\\boot\\result.txt";
 
 int main(int argc, const char* argv[])
@@ -101,6 +102,19 @@ int main(int argc, const char* argv[])
         }
 
         return hResult;
+    }
+
+    //
+    // Create boot directory if we need to
+    //
+    DWORD dwAttributes = GetFileAttributesW(g_szDefaultBootPath);
+    if (dwAttributes == INVALID_FILE_ATTRIBUTES) {
+        BOOL bRes = CreateDirectoryW(g_szDefaultBootPath, NULL);
+        if (bRes != TRUE) {
+            wprintf(L"Failed to create directory: %s\nLast result: %d\n", g_szDefaultBootPath, GetLastError());
+            return 1;
+        }
+        printf("Created boot directory.\n");
     }
 
     HSTRING_HEADER hStrHdr2;

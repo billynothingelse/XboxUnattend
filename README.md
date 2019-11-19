@@ -1,13 +1,13 @@
 # XboxUnattend
 Run unattended scripts at the highest privilege level.
 
-### Prerequisites
+## Prerequisites
 - CMake (3.8 or greater)
 - Visual Studio 2015/2017
 - Windows 10 SDK (Preferably latest)
 - Xbox One Devkit
 
-### Compiling
+## Compiling
 It's important to note that debug builds will fail most of the time so it is best to always build with the release configuration as well as x64.
 
 Generate a solution:

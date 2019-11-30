@@ -1,6 +1,33 @@
 # XboxUnattend
 Run unattended scripts at the highest privilege level.
 
+## Prerequisites
+- CMake (3.8 or greater)
+- Visual Studio 2015/2017
+- Windows 10 SDK (Preferably latest)
+- Xbox One Devkit
+
+## Compiling
+It's important to note that debug builds will fail most of the time so it is best to always build with the release configuration as well as x64.
+
+Generate a solution:
+```
+mkdir Build
+cd Build
+cmake ..\ -G "Visual Studio 15 2017 Win64"
+```
+Building:
+```
+cmake --build . --config Release
+```
+Example of generating and building:
+```
+mkdir Build
+cd Build
+cmake ..\ -G "Visual Studio 15 2017 Win64"
+cmake --build . --config Release
+```
+
 ## Usage
 ```
 xboxunattend.exe -usb - Run an unattended script located on the root of USB device

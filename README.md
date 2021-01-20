@@ -1,6 +1,9 @@
 # XboxUnattend
 Run unattended scripts at the highest privilege level.
 
+## Notice
+This no longer works correctly.
+
 ## Prerequisites
 - CMake (3.8 or greater)
 - Visual Studio 2015/2017
